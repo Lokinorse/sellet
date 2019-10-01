@@ -61,7 +61,18 @@
 
     function onRefill() {
         handleLandingFormSubmit(form)
+        makeRedirect(form)
+
     }
+
+    function makeRedirect(form) {
+        if (!form.redirect) return
+        setTimeout(function() {
+            window.location = form.redirect
+        }, 1000)
+    }   
+    
+    
 
 </script>
 
